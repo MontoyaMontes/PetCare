@@ -35,16 +35,17 @@ body{
 .jumbotron {
   color: #ddd;
   margin: 0px;
-  padding: 100px;
+  padding: 50px;
   background: 
   linear-gradient(
     90deg, rgba(2,0,36, .9) 0%, 
-    rgba(64,174,196,0.75) 50%, 
+    rgba(64,174,196,0.8) 50%, 
     rgba(0,212,255, .9) 100%),
   url("../img/monitoring.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
+  height:260px;
   background-attachment: fixed;
 }
 
