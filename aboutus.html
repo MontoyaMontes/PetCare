@@ -15,6 +15,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
     <title>PetCare</title>
 </head>
 
@@ -27,9 +29,8 @@
             <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" width="41" height="38"></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#"><span class="fa fa-info fa-lg"></span> About</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
@@ -46,7 +47,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <button type="button" id="closeLogin" class="close" data-dismiss="modal">×</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -68,7 +69,7 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" id="cancelLogin" data-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                         </div>
                     </form>
@@ -93,18 +94,124 @@
         </div>
     </header>
 
+
+       
+    
     <div class="container">
+                <div class="row">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active">About us</li>
+            </ol>
+            <div class="col-12">
+               <h3>About us</h3>
+               <hr>
+            </div>
+        </div>
+
+        <div class="row row-content">
+            <div class="col-sm-12">
+                <div class="col-12 text-center">
+                    <h1>Our history</h1>
+                 </div>                
+                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, voluptatum nostrum error blanditiis, sint qui nihil quibusdam quaerat perspiciatis amet eligendi distinctio iusto adipisci dignissimos, molestias explicabo dolores doloribus? Ipsum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci reiciendis eum facilis tempore minima ipsum ipsam! Qui et recusandae, sunt eaque quam ab dicta, suscipit quaerat modi delectus laudantium. Recusandae!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quia facere dolore officia cum natus repellendus, maiores ut, sint delectus eius praesentium architecto ab tempora reiciendis! Commodi cumque reprehenderit consequatur.</p>
+            </div>
+
+           
+             
+        </div>
         <div class="row row-content">
             <div class="col">
-               
-                     
+                    <div class="info">
+                        <div class="vet row">
+                            <div class="col-xs-12 col-sm-6">
+                                <img class="img-fluid" src="img/nurse-gc1f99b7bd_1280-removebg-preview.png" alt="vet1">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 dr-descriptio ">
+                                <h1 class="mt-0">VET1 </h1>
+                                <h2 >Graduated from X</h2>
+                                <h4 class="description-fade">Professional License</h4>
+                                <p class="d-sm-block description-fade">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus cupiditate quis a nobis corrupti corporis quia aut accusamus aspernatur, laboriosam dolor iure aliquam, ipsum voluptatem delectus dolorum deserunt aliquid tempora!</p>        
+                            </div>
+                        </div>
+                        <div class="vet row">
+                           
+                            <div class="col-xs-12 col-sm-6">
+                            <img class="img-fluid" src="img/isolated-gd5cf116a1_1280.png" alt="vet2">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 dr-descriptio ">
+                                <h1 class="mt-0">VET2 </h1>
+                                <h2 >Graduated from X</h2>
+                                <h4 class="description-fade">Professional License</h4>
+                                <p class="d-sm-block description-fade">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus cupiditate quis a nobis corrupti corporis quia aut accusamus aspernatur, laboriosam dolor iure aliquam, ipsum voluptatem delectus dolorum deserunt aliquid tempora!</p>        
+                            </div>
+                        </div>
+                    </div>                    
             </div>
         </div>
         
-
-    </div>
-
+        <div class="row-content col">
+            <div class="col-12">
+                <div class="col-12 text-center">
+                    <h1>All our team</h1>
+                 </div>
     
+                <div id="accordion">
+                    <div class="card" data-toggle="collapse" data-target="#team1">
+                        <div class="card-header" role="tab" id="team1-head" >
+                            <h3 class="mb-0">
+                                <a >
+                                    Worker1 <small>WORK</small>
+                                </a> 
+                            </h3>
+                        </div>
+                        <div class="collapse show" id="team1" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="d-none d-sm-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit laboriosam animi reprehenderit atque. Consequuntur nisi dolores aspernatur repellat soluta rem molestiae debitis magni in! Facilis, nihil similique. Reprehenderit, ex consequatur?</p>    
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card" data-toggle="collapse" data-target="#team2">
+                        <div class="card-header" role="tab" id="team2-head">
+                            <h3 class="mb-0">
+                                <a >
+                                    Worker2 <small>WORK</small>
+                                </a> 
+                            </h3>
+                        </div>
+                        <div class="collapse " id="team2" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="d-none d-sm-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit laboriosam animi reprehenderit atque. Consequuntur nisi dolores aspernatur repellat soluta rem molestiae debitis magni in! Facilis, nihil similique. Reprehenderit, ex consequatur?</p>    
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card" data-toggle="collapse" data-target="#team3">
+                        <div class="card-header" role="tab" id="team3-head">
+                            <h3 class="mb-0">
+                                <a>
+                                    Worker3 <small>WORK</small>
+                                </a> 
+                            </h3>
+                        </div>
+                        <div class="collapse " id="team3" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="d-none d-sm-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit laboriosam animi reprehenderit atque. Consequuntur nisi dolores aspernatur repellat soluta rem molestiae debitis magni in! Facilis, nihil similique. Reprehenderit, ex consequatur?</p>    
+                            </div>
+                        </div>
+                    </div>
+    
+                  
+    
+                </div>
+            </div>
+        </div>
+    
+    </div>
+  
+
     <footer class="footer">
         <div class="container">
             <div class="row">   
@@ -115,10 +222,9 @@
                 <div class="links-footer col-5 col-sm-3">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a class="nav-link" href="#">Home</a></li>
-                        <li><a class="nav-link" href="./aboutus.html">About</a></li>
-                        <li><a class="nav-link" href="#">Menu</a></li>
-                        <li><a class="nav-link" href="#./contactus.html">Contact</a></li>
+                        <li><a class="nav-link" href="./index.html">Home</a></li>
+                        <li><a class="nav-link" href="#">About</a></li>
+                        <li><a class="nav-link" href="./contactus.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -156,24 +262,19 @@
     <script src="min-js/cdnjs/jquery.min.js" ></script>
 	<!--- This should be in their own file-->
 	<script>
-		$(document).ready(function(){
-			$("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
-		});
+		
 
-		$("#buttonLogin").click(function(){
+        $("#buttonLogin").click(function(){
         $('#loginModal').modal('show');
     	});
+
+		$("#closeLogin").click(function(){
+            $('#loginModal').modal('hide');
+    	});
+		$("#cancelLogin").click(function(){
+            $('#loginModal').modal('hide');
+    	});
+
 
 	</script>
 
